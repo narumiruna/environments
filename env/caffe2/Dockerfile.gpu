@@ -1,6 +1,6 @@
 FROM linkernetworks/minimal-notebook:master-cuda90
 
-RUN apt-get update &  apt-get install -y \
+RUN apt-get update && apt-get install -y \
     git \
     cmake \
     && rm -rf /var/lib/apt/lists/*
