@@ -16,11 +16,11 @@ RUN conda install --quiet --yes -c pytorch \
     && conda clean -tipsy \
     && fix-permissions $CONDA_DIR
 
-RUN conda install --quiet --yes \
+RUN conda install --quiet --yes -c anaconda \
     caffe \
-    python-lmdb && \
-    conda clean -tipsy && \
-    fix-permissions $CONDA_DIR
+    python-lmdb \
+    && conda clean -tipsy \
+    && fix-permissions $CONDA_DIR
 
 RUN pip install -U pip==9.0.3 \
     && pip install -U \
